@@ -1,9 +1,9 @@
-package ru.appline.frameworks.sberbank.managers;
+package ru.appline.frameworks.rencredit.managers;
 
 import java.util.concurrent.TimeUnit;
 
-import static ru.appline.frameworks.sberbank.managers.DriverManager.*;
-import static ru.appline.frameworks.sberbank.utils.PropConst.*;
+import static ru.appline.frameworks.rencredit.managers.DriverManager.*;
+import static ru.appline.frameworks.rencredit.utils.PropConst.*;
 
 public class InitManager {
 
@@ -16,6 +16,9 @@ public class InitManager {
 
     public static void quitFramework() {
         quitDriver();
+    }
 
+    public static void initUrl(){
+        getDriver().get(TestPropManager.getTestPropManager().getProperty(APP_URL));
     }
 }

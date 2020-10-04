@@ -1,4 +1,4 @@
-package ru.appline.frameworks.sberbank.managers;
+package ru.appline.frameworks.rencredit.managers;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,11 +1,11 @@
-package ru.appline.frameworks.sberbank.utils;
+package ru.appline.frameworks.rencredit.utils;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.junit4.AllureJunit4;
 import org.junit.runner.notification.Failure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import ru.appline.frameworks.sberbank.managers.DriverManager;
+import ru.appline.frameworks.rencredit.managers.DriverManager;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,16 +1,19 @@
-package ru.appline.frameworks.sberbank.managers;
+package ru.appline.frameworks.rencredit.managers;
 
-import ru.appline.frameworks.sberbank.pages.CompleteHomePage;
-import ru.appline.frameworks.sberbank.pages.StartPage;
+import ru.appline.frameworks.rencredit.pages.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ManagerPages {
 
     private static ManagerPages managerPages;
-
+    private static List<BasePage> listPages = new ArrayList<>();
 
     private static StartPage startPage;
-
-    private static CompleteHomePage completeHomePage;
+    private static ContributionsPage contributionsPage;
+    private static CardsPage cardsPage;
+    private static LoansPage loansPage;
 
     private ManagerPages() {
     }
@@ -25,35 +28,41 @@ public class ManagerPages {
     public StartPage getStartPage() {
         if (startPage == null) {
             startPage = new StartPage();
+            listPages.add(startPage);
+
         }
         return startPage;
     }
 
-    public CompleteHomePage getCompleteHomePage() {
-        if (completeHomePage == null) {
-            completeHomePage = new CompleteHomePage();
+    public ContributionsPage getContributionsPage() {
+        if (contributionsPage == null) {
+            contributionsPage = new ContributionsPage();
+            listPages.add(contributionsPage);
         }
-        return completeHomePage;
+        return contributionsPage;
     }
+
+    public CardsPage getCardsPage() {
+        if (cardsPage == null) {
+            cardsPage = new CardsPage();
+            listPages.add(cardsPage);
+        }
+        return cardsPage;
+    }
+
+    public LoansPage getLoansPage() {
+        if (loansPage == null) {
+            loansPage = new LoansPage();
+            listPages.add(loansPage);
+        }
+        return loansPage;
+    }
+
 
     public static void deletePages(){
-        startPage = null;
-        completeHomePage = null;
+        for (int i = 0; i < listPages.size(); i++){
+            listPages.remove(i);
+        }
     }
-
-//
-//    public CartPage getCartPage() {
-//        if (cartPage == null) {
-//            cartPage = new CartPage();
-//        }
-//        return cartPage;
-//    }
-//
-//    public ProductPage getProductPage() {
-//        if (productPage == null) {
-//            productPage = new ProductPage();
-//        }
-//        return productPage;
-//    }
 
 }

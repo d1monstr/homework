@@ -1,10 +1,10 @@
-package ru.appline.frameworks.sberbank.managers;
+package ru.appline.frameworks.rencredit.managers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static ru.appline.frameworks.sberbank.utils.PropConst.*;
+import static ru.appline.frameworks.rencredit.utils.PropConst.*;
 
 public class DriverManager {
 

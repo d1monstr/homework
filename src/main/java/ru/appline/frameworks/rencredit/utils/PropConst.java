@@ -1,4 +1,4 @@
-package ru.appline.frameworks.sberbank.utils;
+package ru.appline.frameworks.rencredit.utils;
 
 public class PropConst {
 

@@ -1,4 +1,4 @@
 package ru.appline.frameworks.rencredit.pages;
 
-public class CardsPage {
+public class CardsPage extends BasePage {
 }
